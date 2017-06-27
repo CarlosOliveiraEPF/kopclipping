@@ -1,4 +1,6 @@
 var TwitterPackage = require('twitter');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/carlos');
 
 var secret = {
   consumer_key: 'NbPWv4YokBOvqUb27uBtYcw5P',
@@ -7,11 +9,22 @@ var secret = {
   access_token_secret: 'ZLoOCSwjC3Onjqk5lYjqcE5Jabr6ccZEVuqXO4FLFPBj5'
 }
 
-var Twitter = new TwitterPackage(secret);
+var Post = mongoose.model('Post',{mensagem: String});
 
-Twitter.stream('statuses/filter', {track: '@RedeGlobo'}, function(stream) {
+var Twitter = new TwitterPackage(secret);
+Twitter.stream('statuses/filter', {track: '@realDonaldTrump'}, function(stream) {
   stream.on('data', function(tweet) {
     console.log(tweet.text);
+
+    var postAtual = new Post({mensagem: tweet.text});
+
+    postAtual.save(function (err) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('Salvo com sucesso!');
+      }
+    });
   });
 
   stream.on('error', function(error) {
