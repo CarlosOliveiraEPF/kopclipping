@@ -12,15 +12,16 @@ var secret = {
   access_token_secret: 'ZLoOCSwjC3Onjqk5lYjqcE5Jabr6ccZEVuqXO4FLFPBj5'
 }
 
-var Post = mongoose.model('Post',{id: String
-                                , id_user: String
+
+var Post = mongoose.model('Post',{id: {type: String, unique: true}
+                                , id_user: {type: String, index: true}
                                 , localizacao: String
                                 , data : Date
-                                , mensagem: String
+                                , mensagem: {type: String, unique: true}
                                 , owner : String});
 
 var Twitter = new TwitterPackage(secret);
-Twitter.stream('statuses/filter', {track: '@BancodoBrasil'}, function(stream) {
+Twitter.stream('statuses/filter', {track: '@NetflixBrasil'}, function(stream) {
   stream.on('data', function(tweet) {
     console.log(tweet.id, tweet.user.id, tweet.user.location, tweet.text, tweet.timestamp_ms);
     //console.log(tweet);   @NetflixBrasil @Bradesco @itau @AloBradesco @BancodoBrasil
