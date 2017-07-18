@@ -12,7 +12,6 @@ var secret = {
   access_token_secret: 'ZLoOCSwjC3Onjqk5lYjqcE5Jabr6ccZEVuqXO4FLFPBj5'
 }
 
-
 var Post = mongoose.model('Post',{id: {type: String, unique: true}
                                 , id_user: {type: String, index: true}
                                 , localizacao: String
