@@ -1,4 +1,4 @@
-db.posts.find({mensagem:{$regex:"@NetflixBrasil"}
+﻿db.posts.find({mensagem:{$regex:"@NetflixBrasil"}
           , owner: "user4"}
             ).forEach( function(myDoc) {
           		if(myDoc.localizacao != null){
@@ -11,7 +11,6 @@ db.posts.find({mensagem:{$regex:"@NetflixBrasil"}
           		//	}
           		} 
        		});
-
 
 db.posts.find({mensagem:{$regex:"@NetflixBrasil"}, owner: "user4"}).forEach( function(myDoc) {
         var encontrou = db.teste_local.count({local: myDoc.localizacao});

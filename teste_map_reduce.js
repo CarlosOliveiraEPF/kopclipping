@@ -17,7 +17,6 @@ result = db.runCommand({
 });
 
 
-
 //db.testexxx.insert([
 //    { "_id" : 10, "descricao" : "#Apple #iPhone 4" },
 //    { "_id" : 12, "descricao" : "Apple #iPhone 5 16gb" },

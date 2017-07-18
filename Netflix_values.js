@@ -1,4 +1,4 @@
-//RODANDO O COMANDO DE AGREGAÃ‡ÃƒO
+﻿//RODANDO O COMANDO DE AGREGAÃ‡ÃƒO
 /* var a = db.runCommand(
     { aggregate: "carlosarticles",
       pipeline: [
@@ -12,6 +12,7 @@
     }
  );
 */
+
 
 //RODANDO O COMANDO DE AGREGACAO
  var a = db.runCommand(

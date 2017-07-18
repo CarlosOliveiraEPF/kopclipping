@@ -16,3 +16,4 @@ print("Separando as localidades dos tweets @NetflixBrasil por ordem decrescente.
 db.nfBr_localidades.drop();
 db.nfBr_localidades.save(a.result);
 printjson(a.result);
+

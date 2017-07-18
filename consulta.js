@@ -1,4 +1,4 @@
-// Quantidade de mensagens coletadas @NetflixBrasil
+﻿// Quantidade de mensagens coletadas @NetflixBrasil
 /*
 var a = db.runCommand (
 {aggregate : "posts",
@@ -12,6 +12,7 @@ var a = db.runCommand (
            ]
 });
 printjson("Quantidade de mensagens coletadas do perfil @NetflixBrasil" + a.result);
+
 */
 
 // CLASSIFICANDO POR CIDADE

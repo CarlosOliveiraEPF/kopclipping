@@ -1,4 +1,4 @@
-var tweetsPositivos = [
+﻿var tweetsPositivos = [
 		/ótimo desempenho/,
 		/otimo desempenho/,
 		/ótima qualidade/,

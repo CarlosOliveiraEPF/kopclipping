@@ -4,7 +4,6 @@ var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://user4:123456@ds139942.mlab.com:39942/kopteste');
 
-
 var secret = {
   consumer_key: 'NbPWv4YokBOvqUb27uBtYcw5P',
   consumer_secret: 'F4S2qw5qUj1zowh8J3VkMRRkBwokAEXSDRCqAcLwfPxQDZTf2T',
